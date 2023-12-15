@@ -8,9 +8,6 @@ ul {
     list-style-type: none;
 }
 
-/* COLORS  */
-
-
 
 #sidebar {
     background: url(../img/sidebar-bg.png);
@@ -19,6 +16,10 @@ ul {
     background-color: #12283e;
 }
 
+.student-boolean {
+    background-color: #1b72e8;
+}
 
-
-
+.badge-blue {
+    background-color: #165bba;
+}
