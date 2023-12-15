@@ -17,14 +17,14 @@
 <body>
 
      <!-- SECTION HEADER -->
-     <header>
+     <header style="height: 60px;">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid"> 
                 <!-- SECTION LOGO -->
                 <div class="row justify-content-center align-items-center">
                     <a class="navbar-brand m-2" href="#">
                         <img src="./assets/img/logo.svg" alt="Logo" class="d-none d-lg-block">
-                        <img src="./assets/img/mobile-logo.png" class="logo-small d-block d-lg-none" alt="Logo small">
+                        <img src="./assets/img/mobile-logo.png" class="logo-small d-block d-lg-none" alt="Logo small" height="50" width="50">
                     </a>
                 </div>
                 <!-- // SECTION LOGO // -->
@@ -33,7 +33,7 @@
                 <div class="col">
                     <nav class="navbar">
                         <form class="container-fluid">
-                            <div class="input-group ">
+                            <div class="input-group">
                               <span class="input-group-text bg-secondary-subtle" id="search"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></span>
                               <input type="text" class="form-control my-form-control bg-secondary-subtle text-secondary" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" aria-describedby="search">
                             </div>
@@ -79,8 +79,50 @@
         </nav>
     </header>
     <!-- // SECTION HEADER // -->
+    
+    <!-- SECTION SIDEBAR -->
+    <main style="height: calc(100vh - 60px);">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-auto h-100 px-2 py-3" id="sidebar">
+                    <div class="h-100 d-flex flex-column justify-content-between align-items-center align-items-sm-center pt-2 text-white">
+                        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link py-3 rounded-0 text-light d-flex align-items-center gap-2" aria-current="page" data-bs-placement="right" aria-label="Home" data-bs-original-title>
+                                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                                    <span class="d-none d-lg-block">Home</span>
+                                </a>
+                            </li>
 
-    <!-- NOTE - WORK SIDEBAR  -->
+                            <li class="nav-item">
+                                <a href="#" class="nav-link py-3 rounded-0 text-light d-flex align-items-center gap-2" aria-current="page" data-bs-placement="right" aria-label="Home" data-bs-original-title>
+                                    <i class="fa-solid fa-chart-simple" style="color: #ffffff;"></i>
+                                    <span class="d-none d-lg-block">Stats</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link py-3 rounded-0 text-light d-flex align-items-center gap-2" aria-current="page" data-bs-placement="right" aria-label="Home" data-bs-original-title>
+                                    <i class="fa-solid fa-signal" style="color: #ffffff;"></i>
+                                    <span class="d-none d-lg-block">Signal</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <a href="#" class="d-flex align-items-center text-light justify-content-center gap-2 p-3 link-body-emphasis text-decoration-none">
+                                <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                                <span class="d-none d-lg-block">Admin</span>
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <!-- // SECTION SIDEBAR // -->
+
+    <!-- NOTE - WORK SECTION NEW STUDENT  -->
 
 
 <!-- LINK JS BOOTSTRAP -->
