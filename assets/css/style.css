@@ -4,8 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f8f9fa;
+}
+
 ul {
     list-style-type: none;
+}
+
+/* UTILITY  */
+
+:root {
+    --color1: #12283e;
+    --color2: #1b72e8;
+    --color3: #165bba;
 }
 
 
@@ -13,15 +25,15 @@ ul {
     background: url(../img/sidebar-bg.png);
     background-size: cover;
     background-repeat: top;
-    background-color: #12283e;
+    background-color: var(--color1);
 }
 
 .student-boolean {
-    background-color: #1b72e8;
+    background-color: var(--color2);
 }
 
 .badge-blue {
-    background-color: #165bba;
+    background-color: var(--color3);
 }
 
 .classes {
@@ -32,3 +44,18 @@ ul {
     font-size: 14px;
 }
 
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px){
+    .fa-bell {
+        margin-left: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    .fa-bell {
+        margin-left: 30px;
+    }
+    
+}
