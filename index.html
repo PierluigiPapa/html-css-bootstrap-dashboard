@@ -25,7 +25,7 @@
                     <img class="img-fluid d-none d-lg-block" src="./assets/img/logo.svg" alt="logo_boolean" height="100">
                 </a>
                 <!-- // SECTION LOGO // -->
-                
+
                 <!-- SECTION FORM -->
                 <form class="d-flex bg-secondary-subtle w-100 rounded" role="search">
                     <div class="input-group">
@@ -37,26 +37,26 @@
                     </div>
                 </form>
                 <!-- // SECTION FORM // -->
-                
+
                 <!-- SECTION ICONS NAVBAR-RIGHT -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link d-none d-lg-block" aria-current="page" href="#"><i class="fa-solid fa-list"></i></a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link d-none d-lg-block" href="#"><i class="fa-solid fa-circle-question"></i></a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link d-none d-lg-block" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                     </li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-bell p-2"></i>
                         </a>
-                        
+
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profilo</a></li>
                             <li><a class="dropdown-item" href="#">Fatturazione</a></li>
@@ -104,51 +104,146 @@
         </div>
         <!--// SECTION SIDEBAR // -->
 
-        <div style="border: 2px solid black; width: 100%; height: 50%" class="student-boolean">
-            <div class="container-fluid py-3">
-                <div class="row">
-                    <div class="col-4 col-lg-6">
+        <!-- SECTION STUDENT WITH OFFCANVAS -->
+        <div style="width: 100%; height: 50%" class="student-boolean container-fluid">
+            <div class="justify-content-center">
+                <div class="row py-3">
+                    <div class="col-12 col-md-3">
+                        <span class="text-light fw-semibold">Nuovo Studente</span>
+    
+                        <button type="button" class="btn btn-outline-light ms-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="fa-solid fa-plus d-sm-inline"></i>
+                        </button>
+                    </div>
+                    
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+    
+                            <div class="offcanvas-body">
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="inputName" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="First name" id="inputName" required>
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="inputLastName" class="form-label">Cognome</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="Last name" id="inputLastName"  required>
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="inputEmail" class="form-label">Email</label>
+    
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-secondary-subtle" id="magnifying-glass">
+                                                <i class="fa-solid fa-at" style="color: #000000;"></i>
+                                            </span>
+    
+                                            <input type="search" class="form-control" placeholder="" id="inputEmail" aria-describedby="basic-search">
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="inputPassword" class="form-label">Password</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="Password" id="inputPassword" required>
+                                    </div>
+    
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="" aria-label="Address" required>
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">Città</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="City" id="inputCity" required>
+                                    </div>
+    
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Stato</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Scegli...</option>
+                                            <option>Italia</option>
+                                            <option>Svizzera</option>
+                                            <option>Repubblica di San Marino</option>
+                                            <option>Francia</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="col-md-2">
+                                        <label for="inputZip" class="form-label">Cap</label>
+                                        <input type="text" class="form-control" id="inputState" aria-label="Zip" required>
+                                    </div>
+    
+                                    <div class="col-12 mb-3">
+                                        <label for="formFileMultiple" class="form-label">Foto</label>
+                                        <input class="input-group-text" type="file" id="formFileMultiple" multiple>
+                                    </div>
+    
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck" required> Seleziona per proseguire </label>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Salva</button>
+                                        <button type="reset" class="btn btn-warning">Svuota</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <span class="fs-2 text-light fw-semibold">Boolean</span>
+                        <span class="badge rounded-pill pills badge-blue d-sm-inline">Piano blaze</span>
+                    </div>
+                    
+                    <div>
+                        <span class="badge rounded-pill pills badge-blue">3 app</span>
+                        
+                        <span>
+                            <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
+                        </span>
+
+                        <span class="badge rounded-pill d-inline d-lg-none badge-blue">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                        <span class="badge rounded-pill  d-none d-lg-inline badge-blue">
+                            Boolean mobile app
+                        </span>
+
+                        <span class="badge rounded-pill d-none d-lg-inline mx-2 badge-blue">
+                            Boolean web app
+                        </span>
+
+                        <span class="badge rounded-pill d-none d-lg-inline badge-blue">
+                            Boolean blog app
+                        </span>
+                    </div>
+
+                    <div class="col py-3">
                         <div>
-                            <span class="fs-2 text-light">
-                                Boolean
+                            <span class="fs-6 text-light fw-se">
+                                Studenti online negli ultimi trenta minuti
                             </span>
                             
-                            <span class="badge rounded-pill pills badge-blue d-sm-inline">
-                                Piano blaze
+                            <span class="fs-1 text-light fw-semibold">
+                                125
                             </span>
                         </div>
-
-                        <div>
-                            <span class="badge rounded-pill pills badge-blue">
-                                3 app
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
-                            </span>
-
-                            <span class="badge rounded-pill d-inline d-lg-none badge-blue">
-                                <i class="fa-solid fa-plus"></i>
-                            </span>
-
-                            <span class="badge rounded-pill  d-none d-lg-inline badge-blue">
-                                Boolean mobile app
-                            </span>
-
-                            <span class="badge rounded-pill d-none d-lg-inline mx-2 badge-blue">
-                                Boolean web app
-                            </span>
-
-                            <span class="badge rounded-pill d-none d-lg-inline badge-blue">
-                                Boolean blog app
-                            </span>
-                        </div>
-
-                                         
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- // SECTION NEW STUDENT WITH OFF CANVAS // -->
     </main>
-
-    <!-- NOTE - WORK SECTION NEW STUDENT  -->
 
 
 <!-- LINK JS BOOTSTRAP -->
