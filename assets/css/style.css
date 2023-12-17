@@ -44,6 +44,10 @@ ul {
     font-size: 14px;
 }
 
+#sidebar li:hover a {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 768px){
